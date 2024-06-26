@@ -1,0 +1,21 @@
+meta {
+  name: Alterar região por ID
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/region/{id}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Admin Token
+}
+
+body:json {
+  {
+    "name": "exemplo de modificação"
+  }
+}

@@ -1,0 +1,21 @@
+meta {
+  name: Get pal por nome
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/pal/{palName}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: Token
+}
+
+body:json {
+  {
+    
+  }
+}

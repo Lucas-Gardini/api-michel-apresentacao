@@ -1,0 +1,22 @@
+meta {
+  name: Atualizar aptidão por id
+  type: http
+  seq: 6
+}
+
+patch {
+  url: {{baseUrl}}/aptitude/update-pal/{id}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Admin Token
+}
+
+body:json {
+  {
+    "level": 1,
+    "pal": {"connect": {"name": "Cattiva"}}
+  }
+}

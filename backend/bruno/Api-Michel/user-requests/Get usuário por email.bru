@@ -1,0 +1,15 @@
+meta {
+  name: Get usuário por email
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/user/email/{userEmail}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: Token
+}

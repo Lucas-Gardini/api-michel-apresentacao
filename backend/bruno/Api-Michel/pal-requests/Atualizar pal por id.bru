@@ -1,0 +1,23 @@
+meta {
+  name: Atualizar pal por id
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/pal/{id}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Admin Token
+}
+
+body:json {
+  {
+    "name": "Exemplo Modificado",
+    "atk": 60,
+    "region": {"connect": {"id": "ecf3068b-2485-47f8-9c0c-df4b875522e2"}}
+  }
+}

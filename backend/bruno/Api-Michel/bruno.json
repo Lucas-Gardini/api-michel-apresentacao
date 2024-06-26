@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Api-Michel",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

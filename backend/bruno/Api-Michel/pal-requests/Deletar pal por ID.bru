@@ -1,0 +1,15 @@
+meta {
+  name: Deletar pal por ID
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/pal/{id}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: Admin Token
+}

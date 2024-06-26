@@ -1,0 +1,22 @@
+meta {
+  name: Modificar usuário por id
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/user/{id}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Token
+}
+
+body:json {
+  {
+    "name": "Exemplo",
+    "email": "modificar@gmail.com"
+  }
+}

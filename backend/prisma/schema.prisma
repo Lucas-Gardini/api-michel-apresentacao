@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User{
+  id String @id @default(uuid())
+  name String @unique
+  email String @unique
+  passwd String
+  role Role?
+  createdAt DateTime @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Region{
+  id String @id @default(uuid())
+  lat Float
+  long Float
+  name String @unique
+  pal Pal[]
+}
+
+model Pal{
+  id String @id @default(uuid())
+  regionId String?
+  region Region? @relation(fields: [regionId], references: [id])
+  palNumber String @unique
+  name String @unique
+  element String
+  heal Int
+  atk Int
+  def Int
+  craft Int
+  companionSkill String
+  createdAt DateTime @default(now())
+  updatedAt DateTime  @updatedAt
+  aptitudeWork AptitudeWork[]
+}
+
+model AptitudeWork {
+  id String @id @default(uuid())
+  palName String
+  pal Pal @relation(fields: [palName], references: [name])
+  name String
+  level Int
+}
+
+enum Role {
+  USER
+  ADMIN
+}

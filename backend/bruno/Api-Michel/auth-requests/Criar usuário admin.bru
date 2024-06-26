@@ -1,0 +1,23 @@
+meta {
+  name: Criar usuário admin
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/auth/registraAdmin
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Admin Token
+}
+
+body:json {
+  {
+    "name": "teste",
+    "email": "teste@gmail.com",
+    "passwd": "123"
+  }
+}

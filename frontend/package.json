@@ -1,0 +1,23 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@formkit/auto-animate": "^0.8.2",
+    "@nuxt/devtools": "latest",
+    "@nuxt/ui": "^2.17.0",
+    "nuxt": "^3.12.1",
+    "sass": "^1.77.6"
+  },
+  "packageManager": "yarn@4.3.0",
+  "dependencies": {
+    "axios": "^1.7.2"
+  }
+}

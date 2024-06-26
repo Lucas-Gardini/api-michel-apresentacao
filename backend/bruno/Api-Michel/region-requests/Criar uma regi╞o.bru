@@ -1,0 +1,23 @@
+meta {
+  name: Criar uma região
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/region
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Admin Token
+}
+
+body:json {
+  {
+    "lat": 45,
+    "long": -234,
+    "name": "região de exemplo"
+  }
+}

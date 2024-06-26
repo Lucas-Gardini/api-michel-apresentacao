@@ -1,0 +1,15 @@
+meta {
+  name: Deletar aptidão por id
+  type: http
+  seq: 7
+}
+
+delete {
+  url: {{baseUrl}}/aptitude/delete-pal/{id}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: Admin Token
+}

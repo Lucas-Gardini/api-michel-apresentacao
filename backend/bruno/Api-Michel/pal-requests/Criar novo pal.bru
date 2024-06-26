@@ -1,0 +1,28 @@
+meta {
+  name: Criar novo pal
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/pal
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: Admin Token
+}
+
+body:json {
+  {
+    "name": "Exemplo",
+    "element": "Neutro",
+    "heal": 50,
+    "atk": 50,
+    "def": 50,
+    "craft": 100,
+    "companionSkill": "Exemplo de skill",
+    "region": {"connect": {"id": "id"}}
+  }
+}

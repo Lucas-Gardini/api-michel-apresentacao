@@ -1,0 +1,21 @@
+meta {
+  name: Get todas as regiões
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/region
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: Token
+}
+
+body:json {
+  {
+    
+  }
+}

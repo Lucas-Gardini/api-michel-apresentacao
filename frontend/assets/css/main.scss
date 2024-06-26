@@ -1,0 +1,31 @@
+@font-face {
+	font-family: "Doncaster Small Capitals W01";
+	src: url("Doncaster%20Small%20Capitals%20W01/Web%20Fonts/ebe0200a0bc9e36e65604cb56165b08.eot");
+	src: url("Doncaster%20Small%20Capitals%20W01/Web%20Fonts/ebe0200a0bc9e36e65604cb56165b08.eot?#iefix") format("embedded-opentype"),
+		url("Doncaster%20Small%20Capitals%20W01/Web%20Fonts/aebe0200a0bc9e36e65604cb56165b08.woff2") format("woff2"),
+		url("Doncaster%20Small%20Capitals%20W01/Web%20Fonts/aebe0200a0bc9e36e65604cb56165b08.woff") format("woff"),
+		url("Doncaster%20Small%20Capitals%20W01/Web%20Fonts/aebe0200a0bc9e36e65604cb56165b08.ttf") format("truetype"),
+		url("Doncaster%20Small%20Capitals%20W01/Web%20Fonts/aebe0200a0bc9e36e65604cb56165b08.svg#Doncaster Small Capitals W01") format("svg");
+}
+
+.app-font {
+	font-family: "Doncaster Small Capitals W01", sans-serif;
+}
+
+.bg-app {
+	background-image: url("background.webp");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	// Opacity
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+}

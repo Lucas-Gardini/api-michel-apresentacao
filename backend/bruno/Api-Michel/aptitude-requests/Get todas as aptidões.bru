@@ -1,0 +1,15 @@
+meta {
+  name: Get todas as aptidões
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/aptitude
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: Token
+}

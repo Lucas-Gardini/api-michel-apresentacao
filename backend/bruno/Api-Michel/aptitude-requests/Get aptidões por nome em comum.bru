@@ -1,0 +1,15 @@
+meta {
+  name: Get aptidões por nome em comum
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/aptitude/name/{aptitudeName}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: Token
+}

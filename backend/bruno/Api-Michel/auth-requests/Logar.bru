@@ -1,0 +1,18 @@
+meta {
+  name: Logar
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/auth/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "teste@gmail.com",
+    "passwd": "123"
+  }
+}
