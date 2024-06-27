@@ -11,7 +11,7 @@ patch {
 }
 
 auth:bearer {
-  token: Admin Token
+  token: {{token}}
 }
 
 body:json {
@@ -20,4 +20,10 @@ body:json {
     "atk": 60,
     "region": {"connect": {"id": "ecf3068b-2485-47f8-9c0c-df4b875522e2"}}
   }
+}
+
+docs {
+  Rota responsável por atualizar o pal pelo id.
+  
+  Autenticação via Bearer Token obtida pela rota de login
 }

@@ -5,13 +5,13 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/auth/registraAdmin
+  url: {{baseUrl}}/auth/registerAdmin
   body: json
   auth: bearer
 }
 
 auth:bearer {
-  token: Admin Token
+  token: {{token}}
 }
 
 body:json {
@@ -20,4 +20,11 @@ body:json {
     "email": "teste@gmail.com",
     "passwd": "123"
   }
+}
+
+docs {
+  Rota responsável por criar um usuário do tipo administrador, quando o usuário logado for do tipo "ADMINISTRADOR"
+  
+  Não é possível repetir o email cadastrado.
+  Autenticação via Bearer Token obtida pela rota de login
 }

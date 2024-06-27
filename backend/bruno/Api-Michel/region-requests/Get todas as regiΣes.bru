@@ -11,11 +11,17 @@ get {
 }
 
 auth:bearer {
-  token: Token
+  token: {{token}}
 }
 
 body:json {
   {
     
   }
+}
+
+docs {
+  Rota responsável por obter todas as regiões do palword.
+  
+  Autenticação via Bearer Token obtida pela rota de login
 }

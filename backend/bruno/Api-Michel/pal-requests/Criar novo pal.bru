@@ -11,7 +11,7 @@ post {
 }
 
 auth:bearer {
-  token: Admin Token
+  token: {{token}}
 }
 
 body:json {
@@ -25,4 +25,12 @@ body:json {
     "companionSkill": "Exemplo de skill",
     "region": {"connect": {"id": "id"}}
   }
+}
+
+docs {
+  Rota responsável por cadastrar um novo pal na base de dados
+  
+  Não é possível repetir o id cadastrado.
+  Parâmetro de região é opcional.
+  Autenticação via Bearer Token obtida pela rota de login
 }

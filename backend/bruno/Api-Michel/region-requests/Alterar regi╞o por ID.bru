@@ -11,11 +11,17 @@ patch {
 }
 
 auth:bearer {
-  token: Admin Token
+  token: {{token}}
 }
 
 body:json {
   {
     "name": "exemplo de modificação"
   }
+}
+
+docs {
+  Rota responsável por atualizar uma região do palword pelo id.
+  
+  Autenticação via Bearer Token obtida pela rota de login
 }

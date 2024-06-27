@@ -11,7 +11,7 @@ post {
 }
 
 auth:bearer {
-  token: Admin Token
+  token: {{token}}
 }
 
 body:json {
@@ -20,4 +20,11 @@ body:json {
     "long": -234,
     "name": "região de exemplo"
   }
+}
+
+docs {
+  Rota responsável por criar uma região do palword.
+  Lat e Lon não devem ser repetidas.
+  
+  Autenticação via Bearer Token obtida pela rota de login
 }

@@ -1,11 +1,11 @@
 meta {
-  name: Get todas as aptidões pelo nome do pal
+  name: Get aptidões pelo nome
   type: http
-  seq: 3
+  seq: 4
 }
 
 get {
-  url: {{baseUrl}}/aptitude/pal-name/{palName}
+  url: {{baseUrl}}/aptitude/name/{aptitudeName}
   body: none
   auth: bearer
 }
@@ -15,7 +15,7 @@ auth:bearer {
 }
 
 docs {
-  Rota responsável por obter todas as aptidões do palword pelo nome do pal.
+  Rota responsável por obter todas as aptidões do palword pelo nome.
   
   Não é possível repetir o email cadastrado.
   Autenticação via Bearer Token obtida pela rota de login

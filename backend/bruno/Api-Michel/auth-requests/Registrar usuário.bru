@@ -7,7 +7,11 @@ meta {
 post {
   url: {{baseUrl}}/auth/register
   body: json
-  auth: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
 }
 
 body:json {
@@ -16,4 +20,11 @@ body:json {
     "email": "teste@gmail.com",
     "passwd": "123"
   }
+}
+
+docs {
+  Rota responsável por criar um usuário do tipo normal
+  
+  Não é possível repetir o email cadastrado.
+  Autenticação via Bearer Token obtida pela rota de login
 }

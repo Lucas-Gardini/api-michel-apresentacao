@@ -11,7 +11,7 @@ post {
 }
 
 auth:bearer {
-  token: Admin Token
+  token: {{token}}
 }
 
 body:json {
@@ -20,4 +20,11 @@ body:json {
     "level": 4,
     "pal": { "connect": { "name": "Lamball" } }
   }
+}
+
+docs {
+  Rota responsável por criar uma aptidão do palword na base.
+  
+  Não é possível repetir o email cadastrado.
+  Autenticação via Bearer Token obtida pela rota de login
 }

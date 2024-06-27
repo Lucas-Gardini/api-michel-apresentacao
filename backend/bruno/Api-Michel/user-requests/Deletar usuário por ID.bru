@@ -11,5 +11,11 @@ delete {
 }
 
 auth:bearer {
-  token: Admin Token
+  token: {{token}}
+}
+
+docs {
+  Rota responsável por excluir um usuário pelo id, travada a um usuário ADMINISTRADOR.
+  
+  Autenticação via Bearer Token obtida pela rota de login
 }

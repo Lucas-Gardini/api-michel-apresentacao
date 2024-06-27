@@ -11,7 +11,7 @@ patch {
 }
 
 auth:bearer {
-  token: Admin Token
+  token: {{token}}
 }
 
 body:json {
@@ -19,4 +19,11 @@ body:json {
     "level": 1,
     "pal": {"connect": {"name": "Cattiva"}}
   }
+}
+
+docs {
+  Rota responsável por atualizar uma aptidão do palword pelo id.
+  
+  Não é possível repetir o email cadastrado.
+  Autenticação via Bearer Token obtida pela rota de login
 }

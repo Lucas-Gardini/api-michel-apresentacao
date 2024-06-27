@@ -11,5 +11,11 @@ get {
 }
 
 auth:bearer {
-  token: Token
+  token: {{token}}
+}
+
+docs {
+  Rota responsável por obter um usuário pelo email, travada a um usuário ADMINISTRADOR.
+  
+  Autenticação via Bearer Token obtida pela rota de login
 }

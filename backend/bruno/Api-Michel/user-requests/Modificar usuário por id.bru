@@ -11,7 +11,7 @@ patch {
 }
 
 auth:bearer {
-  token: Token
+  token: {{token}}
 }
 
 body:json {
@@ -19,4 +19,10 @@ body:json {
     "name": "Exemplo",
     "email": "modificar@gmail.com"
   }
+}
+
+docs {
+  Rota responsável por modificar um usuário pelo id, travada a um usuário ADMINISTRADOR.
+  
+  Autenticação via Bearer Token obtida pela rota de login
 }
