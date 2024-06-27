@@ -1,8 +1,8 @@
 import { Injectable, UnauthorizedException } from "@nestjs/common";
-import { UserService } from "src/user/user.service";
-import * as bcrypt from "bcrypt";
-import { User } from "@prisma/client";
 import { JwtService } from "@nestjs/jwt";
+import * as bcrypt from "bcrypt";
+import { UserDto } from "src/user/dto/user.dto";
+import { UserService } from "src/user/user.service";
 
 @Injectable()
 export class AuthService {
@@ -32,7 +32,7 @@ export class AuthService {
 		return result;
 	}
 
-	async login(user: User) {
+	async login(user: UserDto) {
 		const validate = await this.validateUser(user.email, user.passwd);
 		const payload = { ...validate };
 

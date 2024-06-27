@@ -2,17 +2,15 @@ import {
 	Body,
 	Controller,
 	InternalServerErrorException,
-	Post,
-	Request,
+	Post
 } from "@nestjs/common";
-import { User } from "@prisma/client";
-import { UserService } from "src/user/user.service";
-import { Public } from "src/utils/decorators/public";
-import { AuthService } from "./auth.service";
 import { ApiTags } from "@nestjs/swagger";
 import { HttpResponse } from "semantic-response";
 import { UserDto } from "src/user/dto/user.dto";
+import { UserService } from "src/user/user.service";
+import { Public } from "src/utils/decorators/public";
 import { Roles } from "./acl/roles.decorator";
+import { AuthService } from "./auth.service";
 
 @ApiTags("Autenticação")
 @Controller("auth")
@@ -24,8 +22,8 @@ export class AuthController {
 
 	@Public()
 	@Post("login")
-	async login(@Request() req: { body: User }) {
-		return await this.authService.login(req.body);
+	async login(@Body() userDto: UserDto) {
+		return await this.authService.login(userDto);
 	}
 
 	@Public()
